@@ -1,10 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+.new-book-form-container {
+  display: flex;
+  justify-content: center;
+}
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.new-book-form {
+  width: 100%;
+  max-width: 30vw;
+}
 
-fieldset {
+.fieldset {
   border-width: 2px;
   border-style: groove;
   border-color: #c0c0c0;
@@ -12,7 +16,7 @@ fieldset {
   padding: 1rem;
 }
 
-legend {
+.fieldset legend {
   border: 1px solid;
   padding: 0 .5rem;
 }

@@ -1,0 +1,11 @@
+.books__container {
+  /*width: 100%;*/
+  /*max-width: 30vw;*/
+  display: flex;
+  justify-content: center;
+}
+
+.books__container fieldset {
+  width: 100%;
+  max-width: 30vw;
+}

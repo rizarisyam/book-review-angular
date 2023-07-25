@@ -1,0 +1,46 @@
+<div class="new-book-form-container">
+  <form class="new-book-form" [formGroup]="createBookFormGroup" (ngSubmit)="onSubmit()">
+    <fieldset class="fieldset">
+      <legend>New Book</legend>
+
+      <div class="grid grid-cols-1">
+        <div class="flex flex-col gap-4">
+          <div class="grid grid-cols-2 items-center">
+            <label for="" class="">Name</label>
+            <input class="" formControlName="name" type="text">
+          </div>
+
+          <div class="grid grid-cols-2 items-center">
+            <label for="">Year</label>
+            <input formControlName="year" type="text">
+          </div>
+          <div class="grid grid-cols-2">
+            <div class="col-start-2">
+
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!--    <div class="flex flex-col gap-4">-->
+      <!--    <div class="flex justify-between items-center">-->
+      <!--      <label for="" class="" style="max-width: 1rem">Name</label>-->
+      <!--      <input formControlName="name" type="text">-->
+      <!--    </div>-->
+
+      <!--    <div class="flex justify-between items-center">-->
+      <!--      <label for="">Year</label>-->
+      <!--      <input formControlName="year" type="text">-->
+      <!--    </div>-->
+
+      <!--    <div class="flex justify-between">-->
+      <!--&lt;!&ndash;      <label class="flex-1" for="">Year</label>&ndash;&gt;-->
+      <!--      <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>-->
+      <!--    </div>-->
+      <!--    </div>-->
+    </fieldset>
+  </form>
+</div>

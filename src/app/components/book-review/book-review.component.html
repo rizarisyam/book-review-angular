@@ -1,0 +1,51 @@
+
+{{booksReviews | json}}
+
+<main class="book_review__container" *ngIf="isBookSelected">
+  <div class="">
+  <fieldset class="flex-1">
+    <legend>{{bookReviewSelected.name}} review</legend>
+    <div class="flex flex-col gap-2">
+      <div *ngFor="let row of bookReviewSelected.reviews" class="flex flex-col">
+        <span>{{row.email}}</span>
+        <span>{{row.note}}</span>
+        <span>{{row.star}}</span>
+      </div>
+    </div>
+  </fieldset>
+
+    <br>
+  <fieldset class="flex-1">
+    <legend>New Review</legend>
+
+    <form [formGroup]="createReviewForm" (ngSubmit)="onSubmit()">
+      <div class="">
+        <div class="flex flex-col">
+      <div class="grid grid-cols-2 items-center">
+        <label for="">Email</label>
+        <input class="col-start-2" type="email" formControlName="email">
+      </div>
+
+      <div class="grid grid-cols-2 items-center">
+        <label for="">Note</label>
+        <input type="text" formControlName="note">
+      </div>
+
+      <div class="grid grid-cols-2 items-center">
+        <label for="">Star</label>
+        <input type="text" formControlName="star">
+      </div>
+
+      <div class="flex gap-4">
+        <label for=""></label>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+<!--        <button type="submit">Submit</button>-->
+      </div>
+        </div>
+        </div>
+    </form>
+  </fieldset>
+
+  </div>
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button" (click)="exportToJsonFile()">Export JSON</button>
+</main>

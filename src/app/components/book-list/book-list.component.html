@@ -1,0 +1,16 @@
+
+
+<div class="books__container">
+  <fieldset>
+    <legend>Books</legend>
+
+<!--    <div>{{bookList | json}}</div>-->
+    <div class="flex flex-wrap justify-between gap-4">
+
+      <div *ngFor="let row of bookList" class="flex w-24 flex-col justify-center border" (click)="onClickBook($event, row)">
+        <span class="m-4 flex justify-center">{{row.name}}</span>
+        <span class="bg-gray-500 flex justify-center">{{row.year}}</span>
+      </div>
+    </div>
+  </fieldset>
+</div>

@@ -1,0 +1,13 @@
+
+.book_review__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.book_review__container div {
+  width: 100%;
+  max-width: 60vw;
+  /*display: flex;*/
+}
